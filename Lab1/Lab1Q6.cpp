@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to check if a number is odd or even
 */
 
 #include "stdafx.h"

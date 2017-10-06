@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to output a number entered by the user
 */
 #include "stdafx.h"
 #include <iostream>

@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to check if a year entered by the user is a leap year
 */
 
 #include "stdafx.h"

@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to check if a letter is a vowel or a consonant
 */
 
 #include "stdafx.h"

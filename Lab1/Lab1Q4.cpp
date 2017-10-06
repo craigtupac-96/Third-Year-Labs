@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to find Size of int, float, double and char.
 */
 
 #include "stdafx.h"

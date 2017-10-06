@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to swap 2 numbers
 */
 
 #include "stdafx.h"

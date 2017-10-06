@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to find the largest number out of 3 numbers
 */
 
 #include "stdafx.h"
