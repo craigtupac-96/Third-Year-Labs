@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to output Hello World
 */
 #include "stdafx.h"
 #include <iostream>
