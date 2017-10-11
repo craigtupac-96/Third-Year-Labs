@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to check if a number is a palindrome or not
 */
 
 #include "stdafx.h"

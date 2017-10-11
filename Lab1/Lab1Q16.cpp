@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to Convert Binary Number to Decimal and vice-versa
 */
 
 #include "stdafx.h"

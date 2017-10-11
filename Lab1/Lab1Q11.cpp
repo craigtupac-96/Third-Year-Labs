@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to reverse a number. The number is an int
 */
 
 #include "stdafx.h"

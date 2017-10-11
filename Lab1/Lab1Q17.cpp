@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to convert chars 0-9 (input) to an integer
 */
 
 #include "stdafx.h"

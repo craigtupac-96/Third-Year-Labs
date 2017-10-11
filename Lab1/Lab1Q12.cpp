@@ -1,6 +1,7 @@
 /*
 	Author: Craig Lawlor
 	C00184465
+	Description: A program to find the ASCII value of a character
 */
 
 #include "stdafx.h"
