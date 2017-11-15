@@ -1,0 +1,3 @@
+﻿  EightByEightGrid.cpp
+c:\users\craig\google drive\college\advanced programming\third-year-labs\lectures\eightbyeightgrid\eightbyeightgrid\eightbyeightgrid.cpp(20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  EightByEightGrid.vcxproj -> C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\Lectures\EightByEightGrid\Debug\EightByEightGrid.exe
