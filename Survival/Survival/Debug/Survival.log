@@ -1,1 +1,4 @@
-﻿  Survival.vcxproj -> C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\Survival\Debug\Survival.exe
+﻿  Survival.cpp
+c:\users\craig\google drive\college\advanced programming\third-year-labs\survival\survival\survival.cpp(36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\craig\google drive\college\advanced programming\third-year-labs\survival\survival\survival.cpp(149): warning C4018: '<': signed/unsigned mismatch
+  Survival.vcxproj -> C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\Survival\Debug\Survival.exe
