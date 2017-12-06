@@ -1,0 +1,3 @@
+﻿  List.cpp
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\list.cpp(63): warning C4715: 'List::pop_back': not all control paths return a value
+  LinkedList.vcxproj -> C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\LinkedList\x64\Debug\LinkedList.exe

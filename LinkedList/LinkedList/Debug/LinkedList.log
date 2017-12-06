@@ -1,0 +1,50 @@
+﻿  Node.cpp
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\node.cpp(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\node.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\node.cpp(6): error C2572: 'Node::Node': redefinition of default argument: parameter 1
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\node.h(8): note: see declaration of 'Node::Node'
+  LinkedList.cpp
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\node.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\simplestring.h(2): error C2011: 'SimpleString': 'class' type redefinition
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\simplestring.h(2): note: see declaration of 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(14): error C2079: 'stringObject1' uses undefined class 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(14): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(14): note: The initializer contains too many elements
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(15): error C2079: 'stringObject2' uses undefined class 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(15): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(15): note: The initializer contains too many elements
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(16): error C2079: 'stringObject3' uses undefined class 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(16): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(16): note: The initializer contains too many elements
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(17): error C2079: 'stringObject4' uses undefined class 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(17): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(17): note: The initializer contains too many elements
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(19): error C2440: 'initializing': cannot convert from 'int *' to 'SimpleString *'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(19): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(20): error C2440: 'initializing': cannot convert from 'int *' to 'SimpleString *'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(20): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(21): error C2440: 'initializing': cannot convert from 'int *' to 'SimpleString *'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(21): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(22): error C2440: 'initializing': cannot convert from 'int *' to 'SimpleString *'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(22): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(26): error C2228: left of '.characters' must have class/struct/union
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(26): note: type is 'int'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(26): error C2027: use of undefined type 'SimpleString'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\simplestring.h(2): note: see declaration of 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(26): error C2227: left of '->characters' must point to class/struct/union/generic type
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(27): error C2228: left of '.characters' must have class/struct/union
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(27): note: type is 'int'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(27): error C2027: use of undefined type 'SimpleString'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\simplestring.h(2): note: see declaration of 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(27): error C2227: left of '->characters' must point to class/struct/union/generic type
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(28): error C2228: left of '.characters' must have class/struct/union
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(28): note: type is 'int'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(28): error C2027: use of undefined type 'SimpleString'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\simplestring.h(2): note: see declaration of 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(28): error C2227: left of '->characters' must point to class/struct/union/generic type
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(29): error C2228: left of '.characters' must have class/struct/union
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(29): note: type is 'int'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(29): error C2027: use of undefined type 'SimpleString'
+  c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\simplestring.h(2): note: see declaration of 'SimpleString'
+c:\users\craig\google drive\college\advanced programming\third-year-labs\linkedlist\linkedlist\linkedlist.cpp(29): error C2227: left of '->characters' must point to class/struct/union/generic type
+  Generating Code...
