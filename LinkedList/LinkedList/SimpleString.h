@@ -14,6 +14,6 @@ public:
 
 	~SimpleString();
 
-	//bool isEqual(const SimpleString &d);
+	bool isEqual(const SimpleString &d);
 
 };

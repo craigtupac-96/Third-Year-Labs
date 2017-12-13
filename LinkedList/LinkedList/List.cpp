@@ -5,8 +5,42 @@ using namespace std;
 
 
 List::List() {
-	cout << "The List has been created (Defualt Constructor)" << endl << endl;
+	cout << "*---* The List has been created (Defualt Constructor)" << endl << endl;
 	head = NULL;
+}
+
+
+void List::insertBefore(Node *loc, const SimpleString &d) {
+	Node *new_node = new Node(d, NULL);
+	if ( loc == head) {
+		head = new_node;
+		new_node->next = loc;
+		return;
+	}
+	else {
+		Node *current = head;
+		while ( current != loc ) {
+			if ( current->next == loc ) {
+				new_node->next = current->next;
+				current->next = new_node;
+				return;
+			}
+			current = current->next;
+		}
+	}
+}
+
+
+void List::insertAfter(Node *loc, const SimpleString &d) {
+	Node *new_node = new Node(d, NULL);
+	if (loc->next == NULL) {
+		loc->next = new_node;
+		new_node->next = NULL;
+	}
+	else {
+		new_node->next = loc->next;
+		loc->next = new_node;
+	}
 }
 
 
@@ -76,6 +110,20 @@ bool List::pop_front(SimpleString &d) {
 }
 
 
+// erase the node and delete it from memory
+void List::erase(Node *loc) {
+	Node *current = head;
+	while (current != loc) {
+		if (current->next == loc) {
+			current->next = current->next->next;
+			loc->data->~SimpleString();  // SimpleString destructor called
+			return;
+		}
+		current = current->next;
+	}
+}
+
+
 void List::displayToConsole() {
 	Node *current = head;
 	if (current == 0) {
@@ -89,13 +137,13 @@ void List::displayToConsole() {
 			cout << " -> ";
 		}
 	}
-	cout << "NULL" << endl;
+	cout << "NULL" << endl << endl;
 }
 
 
 //return a pointer to the searched node. If nullptr is returned then the node is not found
 Node * List::search(const SimpleString &d) {
-	Node *searchNode = head;
+	Node *searchNode = NULL;
 
 	Node *current = head;
 	while (current != NULL) {
@@ -105,9 +153,17 @@ Node * List::search(const SimpleString &d) {
 		current = current->next;
 	}
 	return searchNode;
-} ////////     HERE YOU ARE      /////////////////
+} 
 
 
 List::~List() {
-	cout << endl << "List Deconstructor" << endl;
+	cout << endl << "*---*List Deconstructor called" << endl;
+	Node *shadow = head;
+	Node *point;
+	while ( shadow != NULL ) {
+		point = shadow->next;
+		delete shadow;
+		shadow = point;
+	}
+	head = NULL;
 }
