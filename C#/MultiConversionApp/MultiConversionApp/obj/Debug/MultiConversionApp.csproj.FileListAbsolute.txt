@@ -1,0 +1,9 @@
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\bin\Debug\MultiConversionApp.exe
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\bin\Debug\MultiConversionApp.pdb
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\obj\Debug\MultiConversionApp.csprojResolveAssemblyReference.cache
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\obj\Debug\MultiConversionApp.MultiConversion.resources
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\obj\Debug\MultiConversionApp.Properties.Resources.resources
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\obj\Debug\MultiConversionApp.csproj.GenerateResource.Cache
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\obj\Debug\MultiConversionApp.csproj.CoreCompileInputs.cache
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\obj\Debug\MultiConversionApp.exe
+C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\C#\MultiConversionApp\MultiConversionApp\obj\Debug\MultiConversionApp.pdb

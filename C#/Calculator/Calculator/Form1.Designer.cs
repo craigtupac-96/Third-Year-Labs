@@ -1,4 +1,8 @@
-﻿namespace Calculator
+﻿/*
+ Author: Craig Lawlor
+ C00184465
+ */
+namespace Calculator
 {
     partial class Calculator
     {
