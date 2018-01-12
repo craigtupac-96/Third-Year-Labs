@@ -29,7 +29,7 @@ namespace MultiConversionApp
             InitializeComponent();
         }
 
-        private void heightBtn_Click(object sender, EventArgs e)
+        private void HeightBtn_Click(object sender, EventArgs e)
         {
             this.heightBtn.BackColor = System.Drawing.Color.White;
             this.heightBtn.ForeColor = System.Drawing.Color.SteelBlue;
@@ -47,7 +47,7 @@ namespace MultiConversionApp
             this.currencyBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
         }
 
-        private void currencyBtn_Click(object sender, EventArgs e)
+        private void CurrencyBtn_Click(object sender, EventArgs e)
         {
             this.currencyBtn.BackColor = System.Drawing.Color.White;
             this.currencyBtn.ForeColor = System.Drawing.Color.SteelBlue;
@@ -65,7 +65,7 @@ namespace MultiConversionApp
             this.temperatureBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
         }
 
-        private void temperatureBtn_Click(object sender, EventArgs e)
+        private void TemperatureBtn_Click(object sender, EventArgs e)
         {
             this.temperatureBtn.BackColor = System.Drawing.Color.White;
             this.temperatureBtn.ForeColor = System.Drawing.Color.SteelBlue;
@@ -83,7 +83,7 @@ namespace MultiConversionApp
             this.currencyBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
         }
 
-        private void convertBtn_Click(object sender, EventArgs e)
+        private void ConvertBtn_Click(object sender, EventArgs e)
         {
             if (selected == "height") {
                 if (option1.Checked)
@@ -91,18 +91,32 @@ namespace MultiConversionApp
                     this.inputLabel.Text = "Inches";
                     this.outputLabel.Text = "Feet";
 
-                    inch = float.Parse(this.inputBox.Text);
-                    feet = inch / 12;
-                    this.outputBox.Text = "" + feet;
+                    if (ValidInput(this.inputBox.Text))
+                    {
+                        inch = float.Parse(this.inputBox.Text);
+                        feet = inch / 12;
+                        this.outputBox.Text = "" + feet;
+                    }
+                    else {
+                        this.outputBox.Text = "Invalid input";
+                    }
+                    
                 }
                 else
                 {
                     this.inputLabel.Text = "Feet";
                     this.outputLabel.Text = "Inches";
 
-                    feet = float.Parse(this.inputBox.Text);
-                    inch = feet * 12;
-                    this.outputBox.Text = "" + inch;
+                    if (ValidInput(this.inputBox.Text))
+                    {
+                        feet = float.Parse(this.inputBox.Text);
+                        inch = feet * 12;
+                        this.outputBox.Text = "" + inch;
+                    }
+                    else
+                    {
+                        this.outputBox.Text = "Invalid input";
+                    }
                 }
             }
             else if (selected == "currency")
@@ -112,18 +126,32 @@ namespace MultiConversionApp
                     this.inputLabel.Text = "Pound";
                     this.outputLabel.Text = "Euro";
 
-                    pound = float.Parse(this.inputBox.Text);
-                    euro = pound / .79f;
-                    this.outputBox.Text = "" + euro.ToString("0.00");
+                    if (ValidInput(this.inputBox.Text))
+                    {
+                        pound = float.Parse(this.inputBox.Text);
+                        euro = pound / .79f;
+                        this.outputBox.Text = "" + euro.ToString("0.00");
+                    }
+                    else
+                    {
+                        this.outputBox.Text = "Invalid input";
+                    }
                 }
                 else
                 {
                     this.inputLabel.Text = "Euro";
                     this.outputLabel.Text = "Pound";
 
-                    euro = float.Parse(this.inputBox.Text);
-                    pound = euro * .79f;
-                    this.outputBox.Text = "" + pound.ToString("0.00");
+                    if (ValidInput(this.inputBox.Text))
+                    {
+                        euro = float.Parse(this.inputBox.Text);
+                        pound = euro * .79f;
+                        this.outputBox.Text = "" + pound.ToString("0.00");
+                    }
+                    else
+                    {
+                        this.outputBox.Text = "Invalid input";
+                    }
                 }
             }
             else if (selected == "temperature")
@@ -133,20 +161,51 @@ namespace MultiConversionApp
                     this.inputLabel.Text = "Celcius";
                     this.outputLabel.Text = "Fahrenheit";
 
-                    cel = float.Parse(this.inputBox.Text);
-                    fahr = (cel * 9 / 5) + 32;
-                    this.outputBox.Text = "" + fahr;
+                    if (ValidInput(this.inputBox.Text))
+                    {
+                        cel = float.Parse(this.inputBox.Text);
+                        fahr = (cel * 9 / 5) + 32;
+                        this.outputBox.Text = "" + fahr;
+                    }
+                    else
+                    {
+                        this.outputBox.Text = "Invalid input";
+                    }
                 }
                 else
                 {
                     this.inputLabel.Text = "Fahrenheit";
                     this.outputLabel.Text = "Celcius";
 
-                    fahr = float.Parse(this.inputBox.Text);
-                    cel = (5f / 9f) * (fahr - 32f);
-                    this.outputBox.Text = "" + cel;
+                    if (ValidInput(this.inputBox.Text))
+                    {
+                        fahr = float.Parse(this.inputBox.Text);
+                        cel = (5f / 9f) * (fahr - 32f);
+                        this.outputBox.Text = "" + cel;
+                    }
+                    else
+                    {
+                        this.outputBox.Text = "Invalid input";
+                    }
+
                 }
             }
+        }
+
+        private Boolean ValidInput(String input) {
+            Boolean valid = true;
+            int dotCount = 0;
+
+            for (int i = 0; i < input.Length; i++) {
+                if (input[i] == '.') {
+                    dotCount++;
+                }
+            }
+            if (dotCount > 1) {
+                valid = false;
+            }
+
+            return valid;
         }
     }
 }

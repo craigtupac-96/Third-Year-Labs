@@ -1,4 +1,0 @@
-﻿  Creatures.cpp
-c:\users\craig\google drive\college\advanced programming\third-year-labs\creatures\creatures\creatures.cpp(33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\craig\google drive\college\advanced programming\third-year-labs\creatures\creatures\creatures.cpp(145): warning C4018: '<': signed/unsigned mismatch
-  Creatures.vcxproj -> C:\Users\Craig\Google Drive\College\Advanced Programming\Third-Year-Labs\Creatures\Debug\Creatures.exe

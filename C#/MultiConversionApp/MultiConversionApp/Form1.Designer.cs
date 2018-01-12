@@ -55,7 +55,7 @@ namespace MultiConversionApp
             this.heightBtn.TabIndex = 0;
             this.heightBtn.Text = "Height";
             this.heightBtn.UseVisualStyleBackColor = false;
-            this.heightBtn.Click += new System.EventHandler(this.heightBtn_Click);
+            this.heightBtn.Click += new System.EventHandler(this.HeightBtn_Click);
             // 
             // temperatureBtn
             // 
@@ -68,7 +68,7 @@ namespace MultiConversionApp
             this.temperatureBtn.TabIndex = 1;
             this.temperatureBtn.Text = "Temperature";
             this.temperatureBtn.UseVisualStyleBackColor = false;
-            this.temperatureBtn.Click += new System.EventHandler(this.temperatureBtn_Click);
+            this.temperatureBtn.Click += new System.EventHandler(this.TemperatureBtn_Click);
             // 
             // currencyBtn
             // 
@@ -81,7 +81,7 @@ namespace MultiConversionApp
             this.currencyBtn.TabIndex = 2;
             this.currencyBtn.Text = "Currency";
             this.currencyBtn.UseVisualStyleBackColor = false;
-            this.currencyBtn.Click += new System.EventHandler(this.currencyBtn_Click);
+            this.currencyBtn.Click += new System.EventHandler(this.CurrencyBtn_Click);
             // 
             // inputBox
             // 
@@ -162,7 +162,7 @@ namespace MultiConversionApp
             this.convertBtn.TabIndex = 9;
             this.convertBtn.Text = "Convert";
             this.convertBtn.UseVisualStyleBackColor = false;
-            this.convertBtn.Click += new System.EventHandler(this.convertBtn_Click);
+            this.convertBtn.Click += new System.EventHandler(this.ConvertBtn_Click);
             // 
             // MultiConversion
             // 
