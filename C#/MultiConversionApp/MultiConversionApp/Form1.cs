@@ -1,6 +1,7 @@
 ﻿/*
  Author: Craig Lawlor
  C00184465
+ Description: Multi-Conversion Tool
  */
 
 using System;

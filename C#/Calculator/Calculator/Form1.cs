@@ -1,6 +1,7 @@
 ﻿/*
  Author: Craig Lawlor
  C00184465
+ Description: Calculator
 */
 
 using System;
@@ -20,10 +21,12 @@ namespace Calculator
         String number2;
         float num2;
         float total;
-        bool operate = true;
+        Boolean firstOperator = true;
         String operatorSelected;
-        bool numOn = true;
+        Boolean numOn = true;
         String clearValue = "";
+        Boolean secondOperator;
+        String theSecondOperator;
 
         public Calculator()
         {
@@ -39,7 +42,7 @@ namespace Calculator
         {
             if (numOn) {
                 this.resultBox.Text += "1";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "1";
                 }
@@ -52,7 +55,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "2";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "2";
                 }
@@ -64,7 +67,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "3";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "3";
                 }
@@ -76,7 +79,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "4";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "4";
                 }
@@ -88,7 +91,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "5";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "5";
                 }
@@ -100,7 +103,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "6";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "6";
                 }
@@ -112,7 +115,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "7";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "7";
                 }
@@ -124,7 +127,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "8";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "8";
                 }
@@ -136,7 +139,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "9";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "9";
                 }
@@ -148,7 +151,7 @@ namespace Calculator
             if (numOn)
             {
                 this.resultBox.Text += "0";
-                if (!operate)
+                if (!firstOperator)
                 {
                     number2 += "0";
                 }
@@ -157,65 +160,144 @@ namespace Calculator
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            if (number2 != "") {
+            if (number2 != "" && this.resultBox.Text != "") {
                 num2 = float.Parse(number2);
-                calculate(num1, num2, operatorSelected);
-
-                operate = true;
-                num1 = total;
-                num2 = 0;
-                number2 = "";
+                secondOperator = false;
+                calculate(num1, num2, operatorSelected, secondOperator);
             }
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if (operate && this.resultBox.Text != "") {
+            if (firstOperator && this.resultBox.Text != "") {
                 num1 = float.Parse(resultBox.Text);
                 this.resultBox.Text += "+";
                 operatorSelected = "+";
-                operate = false;
+                firstOperator = false;
                 numOn = true;
                 clearValue = this.resultBox.Text;
+            }
+            else if (!firstOperator && number2 != "")
+            {
+                secondOperator = true;
+                theSecondOperator = "+";
+                num2 = float.Parse(number2);
+                calculate(num1, num2, operatorSelected, secondOperator);
+            }
+            if (this.resultBox.Text != "") {
+                char op = this.resultBox.Text[this.resultBox.Text.Length - 1];
+                if (op == '-' || op == '*' || op == '/')
+                {
+                    this.resultBox.Text = this.resultBox.Text.Remove(this.resultBox.Text.Length - 1);
+                    num1 = float.Parse(resultBox.Text);
+                    this.resultBox.Text += "+";
+                    operatorSelected = "+";
+                    firstOperator = false;
+                    numOn = true;
+                    clearValue = this.resultBox.Text;
+                }
             }
         }
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-            if (operate && this.resultBox.Text != "")
+            if (firstOperator && this.resultBox.Text != "")
             {
                 num1 = float.Parse(resultBox.Text);
                 this.resultBox.Text += "-";
                 operatorSelected = "-";
-                operate = false;
+                firstOperator = false;
                 numOn = true;
                 clearValue = this.resultBox.Text;
+            }
+            else if (!firstOperator && number2 != "")
+            {
+                secondOperator = true;
+                theSecondOperator = "-";
+                num2 = float.Parse(number2);
+                calculate(num1, num2, operatorSelected, secondOperator);
+            }
+            if (this.resultBox.Text != "")
+            {
+                char op = this.resultBox.Text[this.resultBox.Text.Length - 1];
+                if (op == '+' || op == '*' || op == '/')
+                {
+                    this.resultBox.Text = this.resultBox.Text.Remove(this.resultBox.Text.Length - 1);
+                    num1 = float.Parse(resultBox.Text);
+                    this.resultBox.Text += "-";
+                    operatorSelected = "-";
+                    firstOperator = false;
+                    numOn = true;
+                    clearValue = this.resultBox.Text;
+                }
             }
         }
 
         private void btnMult_Click(object sender, EventArgs e)
         {
-            if (operate && this.resultBox.Text != "")
+            if (firstOperator && this.resultBox.Text != "")
             {
                 num1 = float.Parse(resultBox.Text);
                 this.resultBox.Text += "*";
                 operatorSelected = "*";
-                operate = false;
+                firstOperator = false;
                 numOn = true;
                 clearValue = this.resultBox.Text;
+            }
+            else if (!firstOperator && number2 != "")
+            {
+                secondOperator = true;
+                theSecondOperator = "*";
+                num2 = float.Parse(number2);
+                calculate(num1, num2, operatorSelected, secondOperator);
+            }
+            if (this.resultBox.Text != "")
+            {
+                char op = this.resultBox.Text[this.resultBox.Text.Length - 1];
+                if (op == '+' || op == '-' || op == '/')
+                {
+                    this.resultBox.Text = this.resultBox.Text.Remove(this.resultBox.Text.Length - 1);
+                    num1 = float.Parse(resultBox.Text);
+                    this.resultBox.Text += "*";
+                    operatorSelected = "*";
+                    firstOperator = false;
+                    numOn = true;
+                    clearValue = this.resultBox.Text;
+                }
             }
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            if (operate && this.resultBox.Text != "")
+            if (firstOperator && this.resultBox.Text != "")
             {
                 num1 = float.Parse(resultBox.Text);
                 this.resultBox.Text += "/";
                 operatorSelected = "/";
-                operate = false;
+                firstOperator = false;
                 numOn = true;
                 clearValue = this.resultBox.Text;
+            }
+            else if (!firstOperator && number2 != "")
+            {
+                secondOperator = true;
+                theSecondOperator = "/";
+                num2 = float.Parse(number2);
+                calculate(num1, num2, operatorSelected, secondOperator);
+            }
+            if (this.resultBox.Text != "")
+            {
+                char op = this.resultBox.Text[this.resultBox.Text.Length - 1];
+                if (op == '+' || op == '-' || op == '*')
+                {
+                    this.resultBox.Text = this.resultBox.Text.Remove(this.resultBox.Text.Length - 1);
+                    num1 = float.Parse(resultBox.Text);
+                    this.resultBox.Text += "/";
+                    operatorSelected = "/";
+                    firstOperator = false;
+                    numOn = true;
+                    clearValue = this.resultBox.Text;
+                }
             }
         }
 
@@ -226,7 +308,7 @@ namespace Calculator
             num2 = 0;
             number2 = "";
             total = 0;
-            operate = true;
+            firstOperator = true;
             operatorSelected = "";
             numOn = true;
             clearValue = "";
@@ -239,13 +321,13 @@ namespace Calculator
             num2 = 0;
             number2 = "";
             total = 0;
-            operate = true;
+            firstOperator = true;
             operatorSelected = "";
             numOn = true;
             clearValue = "";
         }
 
-        private void calculate(float first, float second, String op) {
+        private void calculate(float first, float second, String op, Boolean operator2) {
             if (op == "+") {
                 total = first + second;
             }
@@ -261,10 +343,23 @@ namespace Calculator
             {
                 total = first / second;
             }
-            this.resultBox.Text = "" + total;
+            if (operator2)
+            {
+                this.resultBox.Text = "" + total + theSecondOperator;
+                numOn = true;
+                firstOperator = false;
+                secondOperator = false;
+                operatorSelected = theSecondOperator;
+            }
+            else {
+                this.resultBox.Text = "" + total;
+                numOn = false;
+                firstOperator = true;
+            }
             clearValue = "";
-            numOn = false;
-
+            num1 = total;
+            num2 = 0;
+            number2 = "";
         }
     }
 }
