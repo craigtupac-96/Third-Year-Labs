@@ -1,0 +1,62 @@
+-Gerry Adams+Sinn Fein
+-Richard Bruton+Fine Gael
+-Mick Wallace+Independant
+-Micheal Martin+Fianna Fail
+*2314
+*1423
+*3142
+*2341
+*4321
+*1234
+RB
+MW
+GA
+MM
+
+*4123
+*3214
+*3412
+*2431
+*1234
+GA
+MM
+RB
+MW
+
+*4123
+*3214
+*3412
+*2431
+*1234
+*2314
+*1423
+*3142
+*2341
+*4321
+*1234
+RB
+GA
+MM
+MW
+
+
+
+
+-Kevin Doyle+Fianna Fail
+-cat the bounty+Sinn Fein
+-John LongBottom+Sinn Fein
+-Mary WideLips+Fianna Gael
+-Why no work fren+Fianna Gael
+-Second Breakfast+PD's
+-dog the bounty hunter+PD's
+-mary queen of scots+PD's
+*51726834
+*24765813
+*73481652
+*28354761
+*47158623
+*28651743
+*27418653
+*82416753
+*72416583
+*82416753
