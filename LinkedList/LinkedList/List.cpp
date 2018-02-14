@@ -5,29 +5,33 @@ using namespace std;
 
 
 List::List() {
-	cout << "*---* The List has been created (Defualt Constructor)" << endl << endl;
+	//cout << "*---* The List has been created (Defualt Constructor)" << endl << endl;
 	head = NULL;
 }
 
 
 void List::insertBefore(Node *loc, const SimpleString &d) {
 	Node *new_node = new Node(d, NULL);
-	if ( loc == head) {
+	if (loc == head) {
+		new_node->next = head;
 		head = new_node;
-		new_node->next = loc;
 		return;
 	}
+	 
 	else {
 		Node *current = head;
-		while ( current != loc ) {
-			if ( current->next == loc ) {
-				new_node->next = current->next;
-				current->next = new_node;
-				return;
-			}
+		Node *tempNode = head;
+		while (current != loc && current != nullptr) {
+			tempNode = current;
+
 			current = current->next;
 		}
+		new_node->next = current;
+		tempNode->next = new_node;
+
 	}
+
+	
 }
 
 
@@ -53,16 +57,14 @@ void List::push_back(const SimpleString &d) {
 	}
 	else {
 		Node *current = head;
-		while (current != NULL) {
-			if (current->next->next == NULL) {
-				current->next->next = new_node;
-				new_node->next = NULL;
-				return;
-			}
+		while (current->next != NULL) {
 			current = current->next;
+
+			}
+		current->next = new_node;
 		}
 	}
-}
+
 
 
 void List::push_front(const SimpleString &d) {
@@ -112,14 +114,29 @@ bool List::pop_front(SimpleString &d) {
 
 // erase the node and delete it from memory
 void List::erase(Node *loc) {
+
 	Node *current = head;
-	while (current != loc) {
-		if (current->next == loc) {
-			current->next = current->next->next;
-			loc->data->~SimpleString();  // SimpleString destructor called
-			return;
+	if (loc == head) {
+		head = nullptr;
+		return;
+	}
+	if (loc)
+	{
+
+		Node* current = head;
+		while (current->next != NULL)
+		{
+
+			if (current->next == loc)
+			{
+			
+
+				Node* temp = current->next;
+				current->next = current->next->next;
+				delete temp;
+				break;
+			}
 		}
-		current = current->next;
 	}
 }
 
@@ -144,20 +161,47 @@ void List::displayToConsole() {
 //return a pointer to the searched node. If nullptr is returned then the node is not found
 Node * List::search(const SimpleString &d) {
 	Node *searchNode = NULL;
-
+	bool same = false;
 	Node *current = head;
 	while (current != NULL) {
-		if (current->data->characters == d.characters) {
-			searchNode = current;
+
+		if(current->data->isEqual(d))
+		{
+			return current;
 		}
 		current = current->next;
 	}
-	return searchNode;
-} 
+	return nullptr;
+
+}
+
+
+void List::Print() {
+	static int testNum = 0;
+	testNum++;
+
+	Node *cur = head;
+	std::cout << std::endl << "____" << testNum << "___" << std::endl;
+	while (cur != nullptr)
+	{
+		if (cur->data)
+		{
+			if (cur->data->characters)
+			{
+				std::cout << cur->data->characters << " ";
+
+
+			}
+		}
+		cur = cur->next;
+	}
+	std::cout << std::endl;
+
+}
 
 
 List::~List() {
-	cout << endl << "*---*List Deconstructor called" << endl;
+	//cout << endl << "*---*List Deconstructor called" << endl;
 	Node *shadow = head;
 	Node *point;
 	while ( shadow != NULL ) {

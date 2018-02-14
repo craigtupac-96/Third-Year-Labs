@@ -23,12 +23,12 @@ SimpleString::SimpleString() {
 
 
 SimpleString::~SimpleString() {
-	cout << "*---* SimpleString Destructor called" << endl << endl;
-	delete characters, numofCharacters;
+	//cout << "*---* SimpleString Destructor called" << endl << endl;
+	//delete characters, numofCharacters;
 }
 
 
-bool SimpleString::isEqual(const SimpleString &d) {
+bool SimpleString::isEqual (const SimpleString &d) const {
 	if (numofCharacters == d.numofCharacters) {
 		for (int i = 0; i < numofCharacters; i++) {
 			if (characters[i] != d.characters[i]) {

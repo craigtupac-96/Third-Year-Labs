@@ -28,5 +28,7 @@ public:
 	void displayToConsole();
 	//return a pointer the the searched node. If nullptr is returned then the node is not found
 	Node *search(const SimpleString &d);
+
+	void Print();
 };
 
