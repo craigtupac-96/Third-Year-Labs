@@ -1,29 +1,33 @@
 /*
-	Author: Craig Lawlor
+Author: Craig Lawlor
+C00184465
+Description: A program to output *'s in increasing order then decreasing using only 2 loops
+	*
+	**
+	***
+	****
+	***
+	**
+	*
 */
 
 #include "stdafx.h"
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main()
 {	
-	string ast = "";
-	string jst = "";
-	int index;
+	int num = 8;
 
-	for (index = 0; index < 4; index++) {
-		
-		jst += "*";
-		cout << jst;
-		for (int j = index; j >= 3; j--) {
-			cout << endl;
-			ast += "*";
+	for (int i = 1; i < num; i++) {
+		int m = num / 2 - abs(num / 2 - i);    // abs (absolute number) keeps m positve
+		for (int j = 0; j < m; j++) {
+			cout << '*';
 		}
-		cout << ast << endl;
+		cout << endl;
 	}
+
 	system("pause");
-    return 0;
+	return 0;
 }
 
