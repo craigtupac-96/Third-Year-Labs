@@ -18,11 +18,22 @@ using namespace std;
 int main()
 {	
 	int num = 8;
+	int m;
 
 	for (int i = 1; i < num; i++) {
-		int m = num / 2 - abs(num / 2 - i);    // abs (absolute number) keeps m positve
+		m = num / 2 - abs(num / 2 - i);    // abs (absolute number) keeps m positve
 		for (int j = 0; j < m; j++) {
 			cout << '*';
+		}
+		cout << endl;
+	}
+
+	cout << endl;
+	// reverse
+	for (int i = 1; i < num; i++) {
+		m = abs(num / 2 - i);
+		for (int j = 0; j <= m; j++) {
+			cout << "*";
 		}
 		cout << endl;
 	}
